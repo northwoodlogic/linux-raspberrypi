@@ -1,6 +1,10 @@
 # SPDX-License-Identifier: GPL-2.0
 ifeq ($(CONFIG_OF),y)
 
+# RPI device trees for use wit the "purple" peripheral / console board
+dtb-$(CONFIG_ARCH_BCM2835) += \
+	bcm2835-rpi-b-plus-northwoodlogic-purple.dtb \
+
 dtb-$(CONFIG_ARCH_BCM2835) += \
 	bcm2708-rpi-b.dtb \
 	bcm2708-rpi-b-plus.dtb \
