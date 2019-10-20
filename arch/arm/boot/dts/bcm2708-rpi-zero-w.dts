@@ -1,6 +1,7 @@
 /dts-v1/;
 
 #include "bcm2708.dtsi"
+#include "bcm283x-rpi-csi1-2lane.dtsi"
 
 / {
 	compatible = "raspberrypi,model-zero-w", "brcm,bcm2835";
@@ -131,13 +132,8 @@
 };
 
 &i2s {
-	#sound-dai-cells = <0>;
 	pinctrl-names = "default";
 	pinctrl-0 = <&i2s_pins>;
-};
-
-&random {
-	status = "okay";
 };
 
 &leds {
